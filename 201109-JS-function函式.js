@@ -1,3 +1,4 @@
+//函式 // 使用JSFiddle測試
 function square(number){
     return number*number
 }
