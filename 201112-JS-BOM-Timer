@@ -7,7 +7,7 @@ function myFunc(msg){
 // clearTimeout(timeoutID); // 取消setTimeout
 
 // setInterval
-var IntervalID = setInteval(function(){
+var IntervalID = setInterval(function(){
     alert('message again!');
 },5000);
 // clearInterval(IntervalID) // 取消setInteval
