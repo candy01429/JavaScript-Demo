@@ -1,7 +1,7 @@
 // windows 存取與操作瀏覽器視窗
-var win = window.open('https://tw.news.yahoo.com/');
-var win2 = window.open('https://tw.news.yahoo.com/',
-                       'yahoo-window',
+var win = window.open('https://www.dividend.com/');
+var win2 = window.open('https://www.dividend.com/',
+                       'dividend-window',
                        'width=800,height=600,resizable=yes,scrollbars=yes,location=yes'
 );
 // 5秒後自動關閉
