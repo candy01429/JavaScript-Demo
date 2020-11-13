@@ -1,0 +1,10 @@
+// windows 存取與操作瀏覽器視窗
+var win = window.open('https://tw.news.yahoo.com/');
+var win2 = window.open('https://tw.news.yahoo.com/',
+                       'yahoo-window',
+                       'width=800,height=600,resizable=yes,scrollbars=yes,location=yes'
+);
+// 5秒後自動關閉
+setTimeout(function(){
+    win2.close(); // 只能關閉透過winow.open()方法開啟的視窗
+}, 5000);
