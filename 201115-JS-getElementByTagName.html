@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>JS基礎</title>
+</head>
+<body>
+	<!--取得指定'標籤名稱'的HTML元素集合-->
+	<p>content-1</p>
+	<p>content-2</p>
+	<script>
+		// 取得頁面上所有<p>的元素
+		var ps = document.getElementByTagName('p');
+		alert('changing paragraph color...');
+		// 將所有<p>元素的文字顏色都更改
+		for (var i = 0; i < ps.lenght; ++i) {
+			ps[i].style.color = 'red';
+		}
+	</script>
+</body>
+</html>

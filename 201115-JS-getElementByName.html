@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>JS基礎</title>
+</head>
+<body>
+	<!--取得指定'名稱'的HTML元素集合,不同元素name可能相同,回傳一個類陣列的集合-->
+	<div>
+		<form name="myForm">
+			<input type="text">
+		</form>
+	</div>
+	<script>
+		// 取得 name 是 myForm的元素
+		var myForm = document.getElementByName('myForm');
+		console.log(myForm[0].tagName);// 輸出"FORM"
+	</script>
+</body>
+</html>
