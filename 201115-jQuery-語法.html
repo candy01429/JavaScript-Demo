@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>jQuery基礎</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<p id="mp" style="background-color: red;">test</p>
+	<button id="bt">click me</button>
+	<script>
+		/*  1.由'$'or'jQuery'開頭
+			2.接續()
+			3.動作或方法
+		 */
+		$('#bt').click(function() {
+			$('#mp').css('background-color', 'blue');
+		}); // 按下click按鈕後,背影色從紅變成藍
+	</script>
+</body>
+</html>

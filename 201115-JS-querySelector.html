@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>JS基礎</title>
+</head>
+<body>
+	<!--querySelector:用CSS選擇器來找"符合條件"的"第一個"HTML元素-->
+	<!--querySelectorAll:用CSS選擇器來找"符合條件"的"所有"HTML元素-->
+	<p>content-1</p>
+	<p class="test">content-2</p>
+	<p>content-3</p>
+	<p class="test">content-4</p>
+	<div>
+		<form>
+			username:<input class="main" name="username" /><br> 
+			password:<input class="main" name="password" />
+		</form>
+	</div>
+
+	<script>
+		// 找出class name 是test的HTML元素，且只第一個
+		var el1 = document.querySelector('.test');
+		console.log(el1);
+		// 找出<div>元素下的<form>，且name=username的<input>子元素
+		var el2 = document.querySelector('div > form > input[name=username]');
+		console.log(el2);
+	</script>
+</body>
+</html>
