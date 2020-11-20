@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>attributes</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <a id="lk" href="https://tw.yahoo.com/" target="_blank" test-attr>
+            tw.yahoo.com
+        </a>
+
+        <script>
+            var f = document.getElementById('lk');
+            var attr = a.attributes['href']; // 使用屬性名稱
+            console.log('name: '+attr.name); // href
+            console.log('value: '+attr.value); // https://tw.yahoo.com/
+            console.log('============================');
+            var attr;
+            for(var i=0;i<a.attributes.length; ++i){
+                attr = a.attributes[i]; // 使用index
+                console.log(attr.name + ': '+attr.value);
+            }
+            /*result:
+             id:lk
+             href: https://tw.yahoo.com/
+             target:_blank
+             test-attr:
+             */
+        </script>
+    </body>
+</html>
