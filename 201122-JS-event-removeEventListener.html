@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="bt">click me</button>
+	<button id="rbt">remove event</button>
+	<script>
+		function eventHandler() {
+			alert('catch event!');
+		}
+		// removeEventListener可以'取消'透過addEventListener()綁定的函式
+		var bt =  document.getElementById('bt');
+		var rbt =  document.getElementById('rbt');
+		bt.addEventListener('click',eventHandler); // 綁定
+		rbt.addEventListener('click',function(){
+			bt.removeEventListener('click',eventHandler); // 取消綁定
+			alert('eventHandler has been remove from bt!')
+		}); // 綁定
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="bt">click me</button>
+	<button id="bt2">click me2</button>
+	<script>
+		// addEventListener(eventType事件名稱,listener事件處理函式)
+		function eventHandler() {
+			alert('catch event!');
+		}
+		// 當user用滑鼠點擊button時,執行eventHandler
+		document.getElementById('bt').addEventListener('click', eventHandler);
+		// 當載入網頁時,執行這個callback函式
+		window.addEventListener('load', function() {
+			alert('page loaded!');
+		});
+	</script>
+
+</body>
+</html>

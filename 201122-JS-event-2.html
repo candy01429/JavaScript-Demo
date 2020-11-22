@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+</head>
+<body>
+<button id="myButton">click me</button>
+<script>
+	// 使用JavaScript選與HTML元素後得到的DOM物件,將有對應物件屬性可用來綁定事件處理函式
+	function eventHandler(){
+		alert('catch event!');
+	}
+	var ele = document.getElementById('myButton');
+	ele.onclick = eventHandler;
+	// ele.onclick = null; // cancle binding
+</script>
+
+</body>
+</html>

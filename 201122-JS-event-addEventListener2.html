@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="bt">click me</button>
+	<button id="bt2">click me2</button>
+	<script>
+		// addEventListener(eventType事件名稱,listener事件處理函式)
+		function eventHandler() {
+			alert('catch event!');
+		}
+		function eventHandler2() {
+			alert('catch event2!');
+		}
+		var btn =  document.getElementById('bt');
+		// 同時執行eventHandler/eventHandler2
+		btn.addEventListener('click',eventHandler);
+		btn.addEventListener('click',eventHandler2);
+		// 當載入網頁時,執行這個callback函式
+		window.addEventListener('load', function() {
+			alert('page loaded!');
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		MouseDown TimeStamp:<span id="time">-</span>
+	</p>
+	<p>
+		MouseDown Position
+		(當按下滑鼠時(or觸控螢幕時),取得距離頁面(document)最左上角的(水平,垂直)距離(單位pixel)): 
+		<span id="pageX">-</span> 
+		<span id="pageY">-</span>
+	</p>
+	<script>
+		var time = document.getElementById("time");
+		var pageX = document.getElementById("pageX");
+		var pageY = document.getElementById("pageY");
+		function eventHandler(event) {
+			time.firstChild.nodeValue = new Date(new Date().getTime()
+					+ event.timeStamp);
+			PageX.innerText = event.PageX;
+			PageY.firstChild.nodeValue = event.PageY;
+		}
+		document.addEventListener('mousedown', eventHandler); // 按下滑鼠時,取得最新time
+	</script>
+</body>
+</html>
