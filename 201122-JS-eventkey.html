@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function keydown(event, t) {
+                console.log(event.keyCode + ", " + t.value);
+            }
+            function keypress(event, t) {
+                if (window.event)
+                    console.log(event.keyCode + ", " + t.value);
+                else
+                    console.log(event.charCode + ", " + t.value);
+            }
+            function keyup(event, t) {
+                console.log(event.keyCode + ", " + t.value);
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>keydown:</td>
+                <td><input type="text" id="kd" onkeydown="keydown(event, this);"/></td>
+            </tr>
+
+            <tr>
+                <td>keydown:</td>
+                <td><input type="text" id="kp" onkeypress="keypress(event, this);"/></td>
+            </tr>
+            
+            <tr>
+                <td>keypress:</td>
+                <td><input type="text" id="ku" onkeyup="onkeyup(event, this);"/></td>
+            </tr>
+        </table>
+    </body>
+</html>

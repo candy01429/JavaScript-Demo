@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+		<!--綁定事件處理函式-->
+        <button onclick="eventHandler();">click me</button>
+        <script>
+            function eventHandler() {
+                alert('catch event!');
+            }
+        </script>
+        <button onclick="eventHandler(this);">click me</button>
+        <script>
+            function eventHandler(ele) {
+                alert(ele.getAttribute('onclick'));
+            }
+        </script>
+    </body>
+</html>
